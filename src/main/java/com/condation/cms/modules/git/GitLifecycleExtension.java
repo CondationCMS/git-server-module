@@ -21,6 +21,8 @@ package com.condation.cms.modules.git;
  * <http://www.gnu.org/licenses/gpl-3.0.html>.
  * #L%
  */
+import com.condation.cms.api.eventbus.EventBus;
+import com.condation.cms.api.eventbus.events.RepoCheckoutEvent;
 import com.condation.cms.api.extensions.server.ServerLifecycleExtensionPoint;
 import com.condation.cms.api.feature.features.InjectorFeature;
 import com.condation.cms.api.scheduler.CronJobScheduler;
@@ -49,12 +51,17 @@ public class GitLifecycleExtension extends ServerLifecycleExtensionPoint {
 	@Override
 	public void started() {
 		try {
-			var scheduler = getContext().get(InjectorFeature.class).injector().getInstance(Key.get(CronJobScheduler.class, Names.named("server")));
+			var injector = getContext().get(InjectorFeature.class).injector();
+			var scheduler = injector.getInstance(Key.get(CronJobScheduler.class, Names.named("server")));
 			
 			REPO_MANAGER = new RepositoryManager(scheduler);
 			
 			REPO_MANAGER.init(Path.of("config/git.yaml"));
 			
+			
+			injector.getInstance(Key.get(EventBus.class, Names.named("server"))).register(RepoCheckoutEvent.class, (event) -> {
+				REPO_MANAGER.updateRepo(event.repo());
+			});
 		} catch (Exception ex) {
 			log.error("error starting git module", ex);
 		}
