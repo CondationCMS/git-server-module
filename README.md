@@ -1,16 +1,7 @@
-# backup module for CondationCMS
+# git module for CondationCMS
 
-This modules provides a simple backup solution
+This modules provides the git integration as server module
 
-```toml
-# add the backup to the list of active modules
-[modules]
-active = ["backup-module"]
+## migration form core functionality
 
-# config the backup
-[backup]
-enabled = true
-# run backup every night at 2 o'clock
-cron = "0 0 2 * * ?"
-target = "/temp/backups"
-```
+move git.yaml from server root rot serer root/config
