@@ -57,7 +57,7 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>33.5.0-jre</version>
+			<version>33.6.0-jre</version>
 		</dependency>
 		
 		 
@@ -66,7 +66,7 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
-			<version>1.18.44</version>
+			<version>1.18.46</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -131,7 +131,7 @@
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
-							<version>1.18.44</version>
+							<version>1.18.46</version>
 						</path>
 						<path>
 							<groupId>com.condation.modules.framework</groupId>
