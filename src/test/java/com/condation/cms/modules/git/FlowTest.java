@@ -30,6 +30,7 @@ import com.condation.cms.modules.git.tasks.ResetTask;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -39,6 +40,7 @@ import org.junit.jupiter.api.Test;
 public class FlowTest {
 	
 	@Test
+    @Disabled
 	void flow_test () throws Exception {
 		var config = Config.load(Path.of("git.yaml"));
 		

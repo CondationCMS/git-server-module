@@ -4,14 +4,14 @@
 	
 	<groupId>com.condation.cms.modules</groupId>
 	<artifactId>git-server-module</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 	<name>git-server-module</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<module.id>git-module</module.id>
-		<module.name>git module</module.name>
+		<module.id>git-server-module</module.id>
+		<module.name>git server module</module.name>
 		<module.priority>NORMAL</module.priority>
 		
 		<cms.version>8.1.0</cms.version>
