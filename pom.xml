@@ -15,7 +15,7 @@
 		<module.priority>NORMAL</module.priority>
 		
 		<cms.version>8.1.0</cms.version>
-		<modules.version>1.4.0</modules.version>
+		<modules.version>1.4.2</modules.version>
 		<maven.compiler.source>21</maven.compiler.source>
 		<maven.compiler.target>21</maven.compiler.target>
 	</properties>
@@ -47,7 +47,7 @@
 		<dependency>
 			<groupId>org.eclipse.jgit</groupId>
 			<artifactId>org.eclipse.jgit</artifactId>
-			<version>7.6.0.202603022253-r</version>
+			<version>7.7.0.202606012155-r</version>
 		</dependency>
 		<dependency>
 			<groupId>org.yaml</groupId>
