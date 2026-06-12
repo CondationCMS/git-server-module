@@ -4,7 +4,7 @@
 	
 	<groupId>com.condation.cms.modules</groupId>
 	<artifactId>git-server-module</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>jar</packaging>
 	<name>git-server-module</name>
 
@@ -15,7 +15,7 @@
 		<module.priority>NORMAL</module.priority>
 		
 		<cms.version>8.1.0</cms.version>
-		<modules.version>1.4.0</modules.version>
+		<modules.version>1.4.2</modules.version>
 		<maven.compiler.source>21</maven.compiler.source>
 		<maven.compiler.target>21</maven.compiler.target>
 	</properties>
@@ -36,6 +36,12 @@
 			<artifactId>cms-api</artifactId>
 			<scope>provided</scope>
 			<version>${cms.version}</version>
+		 <exclusions>
+		  <exclusion>
+		   <groupId>org.slf4j</groupId>
+		   <artifactId>slf4j-api</artifactId>
+		  </exclusion>
+		 </exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.condation.modules.framework</groupId>
@@ -48,6 +54,12 @@
 			<groupId>org.eclipse.jgit</groupId>
 			<artifactId>org.eclipse.jgit</artifactId>
 			<version>7.6.0.202603022253-r</version>
+		 <exclusions>
+		  <exclusion>
+		   <groupId>org.slf4j</groupId>
+		   <artifactId>slf4j-api</artifactId>
+		  </exclusion>
+		 </exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.yaml</groupId>
@@ -93,6 +105,12 @@
 			<artifactId>junit-jupiter</artifactId>
 			<version>1.21.4</version>
 			<scope>test</scope>
+		 <exclusions>
+		  <exclusion>
+		   <groupId>org.slf4j</groupId>
+		   <artifactId>slf4j-api</artifactId>
+		  </exclusion>
+		 </exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.adobe.testing</groupId>

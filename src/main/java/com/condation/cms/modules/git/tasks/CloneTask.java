@@ -64,6 +64,7 @@ public class CloneTask implements Task<Boolean> {
 		
 		Git result = null;
 		try {
+            log.debug("clone repo {}", repo.getName());
 			result = Git.cloneRepository()
 				.setURI(repo.getUri())
 				.setDirectory(targetFolder.toFile())
@@ -71,7 +72,8 @@ public class CloneTask implements Task<Boolean> {
 				.setBranch("refs/heads/" + repo.getBranch())
 				.setCredentialsProvider(credentialProvider)
 				.call();
-			
+            
+			log.debug("clone done ");
 			return true;
 		} finally {
 			if (result != null) {
