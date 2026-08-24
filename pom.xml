@@ -14,7 +14,7 @@
 		<module.name>git server module</module.name>
 		<module.priority>NORMAL</module.priority>
 		
-		<cms.version>8.2.0</cms.version>
+		<cms.version>8.3.0</cms.version>
 		<modules.version>1.5.0</modules.version>
 		<maven.compiler.source>21</maven.compiler.source>
 		<maven.compiler.target>21</maven.compiler.target>
@@ -69,7 +69,7 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>33.6.0-jre</version>
+			<version>33.7.1-jre</version>
 		</dependency>
 		
 		 
