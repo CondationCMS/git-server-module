@@ -90,13 +90,13 @@
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
-			<version>5.23.0</version>
+			<version>5.24.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-junit-jupiter</artifactId>
-			<version>5.23.0</version>
+			<version>5.24.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -115,7 +115,7 @@
 		<dependency>
 			<groupId>com.adobe.testing</groupId>
 			<artifactId>s3mock-testcontainers</artifactId>
-			<version>5.2.2</version>
+			<version>5.2.3</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
